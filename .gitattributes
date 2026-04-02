@@ -1,0 +1,10 @@
+# منع جيت هب من احتساب لغات الـ C و CMake في الإحصائيات
+*.cpp linguist-detectable=false
+*.h linguist-detectable=false
+*.hpp linguist-detectable=false
+*.c linguist-detectable=false
+*.cmake linguist-detectable=false
+CMakeLists.txt linguist-detectable=false
+
+# التأكد من اعتبار مجلدات معينة كملفات خارجية غير محسوبة
+build/** linguist-vendored
