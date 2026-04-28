@@ -18,7 +18,7 @@ class MycardsAndTransctionHistorySection extends StatelessWidget {
         const Divider(height: 40, color: Colors.grey),
         const TrasnctionHistory(),
         const SizedBox(height: 24),
-
+          const IncomeSection(),
        
       ],
     );

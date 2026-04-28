@@ -40,18 +40,6 @@ class LastestTransctionListviews extends StatelessWidget {
       ),
     );
 
-    // return SizedBox(
-    //   height: 80,
-    //   child: ListView.builder(
-    //     scrollDirection: Axis.horizontal,
-
-    //     itemCount: items.length,
-    //     itemBuilder: (context, index) {
-    //       return IntrinsicWidth(
-    //         child: UserInfoListTitle(userInfoModels: items[index]),
-    //       );
-    //     },
-    //   ),
-    // );
+    
   }
 }

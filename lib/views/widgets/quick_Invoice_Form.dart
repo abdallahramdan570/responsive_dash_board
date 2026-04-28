@@ -26,7 +26,7 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 24),
+        SizedBox(height: 32),
 
         Row(
           children: [
@@ -45,7 +45,7 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
-          SizedBox(height: 24),
+          SizedBox(height: 32),
  Row(
             children: [
               Expanded(child: CustomButtom(
