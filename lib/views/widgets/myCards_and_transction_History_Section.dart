@@ -11,16 +11,19 @@ class MycardsAndTransctionHistorySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const MyCardSeaction(),
-        const Divider(height: 40, color: Colors.grey),
-        const TrasnctionHistory(),
-        const SizedBox(height: 24),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const MyCardSeaction(),
+          const Divider(height: 40, color: Colors.grey),
+          const TrasnctionHistory(),
+          const SizedBox(height: 24),
           const IncomeSection(),
-       
-      ],
+
+          SizedBox(height: 54),
+        ],
+      ),
     );
   }
 }

@@ -12,7 +12,7 @@ class LastestTransction extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
 
-        Text("Lastest Transction", style: AppStyle.styleSemiBold16,
+        Text("Lastest Transction", style: AppStyle.styleSemiBold16(context),
         textAlign: TextAlign.start,
         ),
         SizedBox(height: 16),

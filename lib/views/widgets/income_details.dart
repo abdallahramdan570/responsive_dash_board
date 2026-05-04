@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/items_details_models.dart';
 import 'package:responsive_dash_board/utils/app_style.dart';
@@ -7,6 +9,7 @@ import 'package:responsive_dash_board/views/widgets/items_details.dart';
 class IncomeDetails extends StatelessWidget {
    IncomeDetails({super.key});
 
+  
   List<ItemsDetailsModel> itemsDetails = [
     ItemsDetailsModel(
       title: 'Design services',
@@ -31,13 +34,9 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      itemCount: itemsDetails.length,
-      itemBuilder: (context, index) {
-        return ItemsDetails(itemsDetailsModel: itemsDetails[index]);
-      },
-    );
+    log(MediaQuery.of(  context).size.width.toString());
+return Column( children: itemsDetails.map((e) => ItemsDetails(itemsDetailsModel: e),).toList());
+
+    
   }
 }

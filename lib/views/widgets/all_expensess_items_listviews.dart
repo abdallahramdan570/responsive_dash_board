@@ -28,55 +28,60 @@ class AllExpensessItemsListviews extends StatefulWidget {
   ];
 
   @override
-  State<AllExpensessItemsListviews> createState() => _AllExpensessItemsListviewsState();
+  State<AllExpensessItemsListviews> createState() =>
+      _AllExpensessItemsListviewsState();
 }
 
-class _AllExpensessItemsListviewsState extends State<AllExpensessItemsListviews> {
-  int selectedIndex = 0 ;
-   @override
+class _AllExpensessItemsListviewsState
+    extends State<AllExpensessItemsListviews> {
+  int selectedIndex = 0;
+  @override
   @override
   Widget build(BuildContext context) {
-    return Row(
-      // children: items.map((e) => Expanded(child: AllExpensesItems(itemsModels: e))).toList(),
-      children: AllExpensessItemsListviews.items.asMap().entries.map((e) {
-        int index = e.key;
-        var value = e.value;
-
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                uopdateSelectedIndex(index);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensesItems(
-                  isSelected: selectedIndex == index,
-                  itemsModels: value),
-              ),
+    return Row(children: [
+ Expanded(
+          child: GestureDetector(
+            onTap: () {
+              uopdateSelectedIndex(0);
+            },
+            child: AllExpensesItems(
+              isSelected: selectedIndex == 0,
+              itemsModels: AllExpensessItemsListviews.items[0],
             ),
-          );
-        } else {
-          return Expanded(
-            
-            child: GestureDetector(
-              onTap: () {
-                
-                uopdateSelectedIndex(index);
-              },
-              child: AllExpensesItems(
-                isSelected: selectedIndex == index,
-                itemsModels: value),
-            ));
-        }
-      }).toList(),
-    );
-  }
-  
-  void uopdateSelectedIndex(int index) {
+          ),
+        )
+        , const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              uopdateSelectedIndex(1);
+            },
+            child: AllExpensesItems(
+              isSelected: selectedIndex == 1,
+              itemsModels: AllExpensessItemsListviews.items[1],
+            ),
+          ),
+        )
+        , const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              uopdateSelectedIndex(2);
+            },
+            child: AllExpensesItems(
+              isSelected: selectedIndex == 2,
+              itemsModels: AllExpensessItemsListviews.items[2],
+            ),
+          ),
+        ),
 
+    ]);
+  } 
+
+   
+  void uopdateSelectedIndex(int index) {
     setState(() {
-      selectedIndex = index ;
+      selectedIndex = index;
     });
   }
 }

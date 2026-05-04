@@ -37,7 +37,7 @@ class _MyCardSeactionState extends State<MyCardSeaction> {
             padding: const EdgeInsets.only(top: 20.0),
             child: Text(
               "my Card ",
-              style: AppStyle.styleMedium20.copyWith(color: Color(0xFF4DB7F2)),
+              style: AppStyle.styleMedium20(context).copyWith(color: Color(0xFF4DB7F2)),
             ),
           ),
         ),

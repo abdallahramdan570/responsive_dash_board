@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/items_details_models.dart';
 import 'package:responsive_dash_board/utils/app_style.dart';
@@ -8,6 +7,7 @@ class ItemsDetails extends StatelessWidget {
   final ItemsDetailsModel itemsDetailsModel;
   @override
   Widget build(BuildContext context) {
+  
     return ListTile(
       leading: Container(
         height: 12,
@@ -17,10 +17,10 @@ class ItemsDetails extends StatelessWidget {
           shape: OvalBorder(),
         ),
       ),
-      title: Text(itemsDetailsModel.title, style: AppStyle.styleRegular16),
+      title: Text(itemsDetailsModel.title, style: AppStyle.styleRegular16(context)),
       trailing: Text(
         '${itemsDetailsModel.percentage}%',
-        style: AppStyle.styleMedium16,
+        style: AppStyle.styleMedium16(context),
       ),
     );
   }

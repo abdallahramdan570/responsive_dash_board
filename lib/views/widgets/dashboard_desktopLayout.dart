@@ -3,6 +3,7 @@ import 'package:responsive_dash_board/utils/app_style.dart';
 import 'package:responsive_dash_board/views/widgets/Custom_drawer.dart';
 import 'package:responsive_dash_board/views/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/views/widgets/allexpensess_and_quickInvoice_section.dart';
+import 'package:responsive_dash_board/views/widgets/custom_ui_scroll.dart';
 import 'package:responsive_dash_board/views/widgets/dots_indeicator.dart';
 import 'package:responsive_dash_board/views/widgets/icome_chart.dart';
 import 'package:responsive_dash_board/views/widgets/income_details.dart';
@@ -28,14 +29,8 @@ class DashboardDesktoplayout extends StatelessWidget {
           children: [
             Expanded(child: CustomDrawer()),
             SizedBox(width: 32),
-            Expanded(flex: 2, child: Padding(
-              padding: const EdgeInsets.only(top:40),
-              child: AllExpensessAndQuickInvoiceSection(),
-            )),
-            SizedBox(width: 24),
-            Expanded(child: MycardsAndTransctionHistorySection()),
-        
-             
+          
+            Expanded(flex: 3, child: CustomUIScroll()),
           ],
         ),
       ),

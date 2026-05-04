@@ -22,7 +22,7 @@ final String text;
 
         onPressed: () {},
 
-        child: Text(text, style: AppStyle.styleSemiBold18.copyWith(color: textColor ?? Colors.white)),
+        child: Text(text, style: AppStyle.styleSemiBold18(context)  .copyWith(color: textColor ?? Colors.white)),
       ),
     );
   }

@@ -15,7 +15,7 @@ class TrasnctionHistory extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           "13 April 2024",
-          style: AppStyle.styleMedium16.copyWith(color: Color(0xFFAAAAAA)),
+          style: AppStyle.styleMedium16(context).copyWith(color: Color(0xFFAAAAAA)),
         ),
         SizedBox(height: 10),
         TransctionHistoryListviews(),

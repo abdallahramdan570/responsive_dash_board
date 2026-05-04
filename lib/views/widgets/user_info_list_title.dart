@@ -14,8 +14,8 @@ class UserInfoListTitle extends StatelessWidget {
       child: Center(
         child: ListTile(
           leading:SvgPicture.asset(userInfoModels.image) ,
-          title: Text(userInfoModels.title,style:AppStyle.styleSemiBold16,),
-          subtitle: Text(userInfoModels.email,style:AppStyle.styleRegular12 ,),
+          title: Text(userInfoModels.title,style:AppStyle.styleSemiBold16(context),),
+          subtitle: Text(userInfoModels.email,style:AppStyle.styleRegular12(context) ,),
         ),
       ),
     );

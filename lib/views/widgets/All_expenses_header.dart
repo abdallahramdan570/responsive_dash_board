@@ -9,7 +9,7 @@ class AllExpensesHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("All Epenses",style: AppStyle.styleSemiBold20 ,),
+        Text("All Epenses",style: AppStyle.styleSemiBold20(context) ,),
 
         Expanded(child: SizedBox()),
         RandeOptions(),

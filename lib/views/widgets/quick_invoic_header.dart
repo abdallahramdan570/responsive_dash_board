@@ -9,7 +9,7 @@ class QuickInvoicHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Quick Invoic', style: AppStyle.styleSemiBold20),
+        Text('Quick Invoic', style: AppStyle.styleSemiBold20(context)),
 
         Container(
           width: 50,

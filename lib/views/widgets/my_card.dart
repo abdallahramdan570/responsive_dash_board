@@ -9,7 +9,7 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 420 / 215,
+      aspectRatio: 410 / 215,
 
       child: Container(
         decoration: ShapeDecoration(
@@ -26,15 +26,15 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              contentPadding: EdgeInsets.only(left: 31, top: 16, right: 42),
+           contentPadding: EdgeInsets.only(left: 10,  right: 10, bottom: 18),
               title: Text(
                 "Name Card",
-                style: AppStyle.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyle.styleRegular16(context).copyWith(color: Colors.white),
               ),
-              subtitle: Text("Abdallah Ramadan", style: AppStyle.styleMedium20),
+              subtitle: Text("Abdallah Ramadan", style: AppStyle.styleMedium20(context)),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
-            Expanded(child: SizedBox()),
+          Expanded(child: SizedBox()),
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Column(
@@ -42,7 +42,7 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     "3321 1244 4432 1234",
-                    style: AppStyle.styleSemiBold24.copyWith(
+                    style: AppStyle.styleSemiBold24 (context).copyWith(
                       color: Colors.white,
                     ),
                   ),
@@ -50,12 +50,12 @@ class MyCard extends StatelessWidget {
                   Text(
                     "Exp 12/24",
 
-                    style: AppStyle.styleRegular16.copyWith(
+                    style: AppStyle.styleRegular16(context).copyWith(
                       color: Colors.white,
                     ),
                   ),
 
-                  SizedBox(height: 54 - 28),
+ //           Flexible(child: SizedBox(height: 20)),
                   
                 ],
               ),

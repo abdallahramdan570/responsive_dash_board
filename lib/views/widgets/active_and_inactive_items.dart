@@ -14,7 +14,7 @@ class InActiveDrawerItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemsModels.image),
-      title: Text(drawerItemsModels.title, style: AppStyle.styleMedium16),
+      title: Text(drawerItemsModels.title, style: AppStyle.styleMedium16(context)),
     );
   }
 }
@@ -30,7 +30,7 @@ class ActiveDrawerItems extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(drawerItemsModels.image),
       title: Text(drawerItemsModels.title, 
-      style: AppStyle.styleBold16),
+      style: AppStyle.styleBold16(context)),
       trailing: Container(
         width: 5,
         color: Color(0xFF4EB7F2), // Active indicator color

@@ -20,7 +20,7 @@ class RandeOptions extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text("Monthly",style: AppStyle.styleMedium16,),
+          Text("Monthly",style: AppStyle.styleMedium16(context),),
           SizedBox(width: 18,),
           Icon(Icons.keyboard_arrow_down_outlined,
           color: Color(0xFF064061),)

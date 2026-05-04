@@ -12,8 +12,8 @@ class TrasnctionHistoryHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("Transaction History",style: AppStyle.styleSemiBold20,),
-        Text("See All",style: AppStyle.styleMedium16.copyWith(color: Color(0xFF4EB7F2)),)
+        Text("Transaction History",style: AppStyle.styleSemiBold20(context),),
+        Text("See All",style: AppStyle.styleMedium16(context).copyWith(color: Color(0xFF4EB7F2)),)
       ],
     );
   }
